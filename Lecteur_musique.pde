@@ -39,6 +39,6 @@ initialisation();
   Reading_bar readingBar;
   Sound_bar soundBar;
   
-  Ecrans ecranCentral;
-  Ecrans ecranGauche;
-  Ecrans ecranDroite;
+  Screens ecranCentral;
+  Screens ecranGauche;
+  Screens ecranDroite;

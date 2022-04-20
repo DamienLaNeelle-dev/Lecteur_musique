@@ -1,11 +1,11 @@
-class Ecrans{
+class Screens{
  
   private int positionX;
   private int positionY;
   private int sizeX;
   private int sizeY;
   
-  Ecrans(int positionX, int positionY, int sizeX, int sizeY){
+  Screens(int positionX, int positionY, int sizeX, int sizeY){
    this.positionX = positionX;
    this.positionY = positionY;
    this.sizeX = sizeX;

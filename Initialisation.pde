@@ -88,7 +88,7 @@ void initialisation() {
   readingBar = new Reading_bar(readingBarPositionX, readingBarPositionY, readingBarSizeX, readingBarSizeY);
   soundBar = new Sound_bar(soundBarPositionX1, soundBarPositionY1, soundBarPositionX2, soundBarPositionY2, soundBarPositionX3, soundBarPositionY3, soundBarSizeX, soundBarSizeY);
 
-  ecranCentral = new Ecrans(ecranCentralPositionX, ecranCentralPositionY, ecranCentralSizeX, ecranCentralSizeY);
-  ecranGauche = new Ecrans(ecranGauchePositionX, ecranGauchePositionY, ecranGaucheSizeX, ecranGaucheSizeY);
-  ecranDroite = new Ecrans(ecranDroitePositionX, ecranDroitePositionY, ecranDroiteSizeX, ecranDroiteSizeY);
+  ecranCentral = new Screens(ecranCentralPositionX, ecranCentralPositionY, ecranCentralSizeX, ecranCentralSizeY);
+  ecranGauche = new Screens(ecranGauchePositionX, ecranGauchePositionY, ecranGaucheSizeX, ecranGaucheSizeY);
+  ecranDroite = new Screens(ecranDroitePositionX, ecranDroitePositionY, ecranDroiteSizeX, ecranDroiteSizeY);
 }
