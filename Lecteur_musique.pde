@@ -13,6 +13,7 @@ void draw(){
 initialisation();
 
  buttonPlay.display_button();
+ buttonPause.display_button();
  buttonStop.display_button();
  buttonPrevious.display_button();
  buttonNext.display_button();
@@ -21,9 +22,14 @@ initialisation();
  
  readingBar.display_bar();
  soundBar.display_bar();
+ 
+ ecranCentral.display_ecrans();
+ ecranGauche.display_ecrans();
+ ecranDroite.display_ecrans();
   
 }
   Buttons buttonPlay;
+  Buttons buttonPause;
   Buttons buttonStop;
   Buttons buttonPrevious;
   Buttons buttonNext;
@@ -32,3 +38,7 @@ initialisation();
   
   Reading_bar readingBar;
   Sound_bar soundBar;
+  
+  Ecrans ecranCentral;
+  Ecrans ecranGauche;
+  Ecrans ecranDroite;
