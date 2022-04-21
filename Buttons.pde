@@ -1,17 +1,24 @@
 public class Buttons {
 
+  private int screenSizeX = width;
+  private int screenSizeY = height;
   private int positionX;
   private int positionY;
   private int sizeX;
   private int sizeY;
   private String name;
+  private PImage button[];
 
-  Buttons(String name, int positionX, int positionY, int sizeX, int sizeY) {
+  Buttons(String name, int positionX, int positionY, int sizeX, int sizeY, PImage button[]) {
     this.name = name;
     this.positionX = positionX;
     this.positionY = positionY;
     this.sizeX = sizeX;
     this.sizeY = sizeY;
+    this.button = button;
+    for (int i = 0; i<button.length; i++) {
+      this.button[i].resize(screenSizeX, screenSizeY);
+    }
   }
 
   int getPositionX() {
