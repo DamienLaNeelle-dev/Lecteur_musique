@@ -29,7 +29,10 @@ void draw() {
   ecranGaucheLineHaut2.display_ecrans();
   ecranCentral.display_screen_center();
   ecranDroiteLineGauche.display_ecrans();
-  //ecranDroiteLineBas.display_ecrans();
+  ecranDroiteLineBas.display_ecrans();
+  ecranDroiteLineDroite.display_ecrans();
+  ecranDroiteLineHaut1.display_ecrans();
+  ecranDroiteLineHaut2.display_ecrans();
 }
 Buttons buttonPlay;
 Buttons buttonPause;
@@ -49,4 +52,7 @@ Screens ecranGaucheLineHaut1;
 Screens ecranGaucheLineHaut2;
 Screen_center ecranCentral;
 Screens ecranDroiteLineGauche;
-//Screens ecranDroiteLineBas;
+Screens ecranDroiteLineBas;
+Screens ecranDroiteLineDroite;
+Screens ecranDroiteLineHaut1;
+Screens ecranDroiteLineHaut2;

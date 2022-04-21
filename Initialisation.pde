@@ -99,12 +99,29 @@ void initialisation() {
   int ecranDroiteLineGauchePositionX2 = ecranDroiteLineGauchePositionX1;
   int ecranDroiteLineGauchePositionY2 = ecranGaucheLineGauchePositionY2;
   
-  /*
   int ecranDroiteLineBasPositionX1 = ecranDroiteLineGauchePositionX1;
-  int ecranDroiteLineBasPositionY1 = ecranDroiteLineGauchePositionY1;
-  int ecranDroiteLineBasPositionX2 = ecranDroiteLineBasPositionX1 + soundBarSizeX;
+  int ecranDroiteLineBasPositionY1 = ecranDroiteLineGauchePositionY2;
+  int ecranDroiteLineBasPositionX2 = ecranDroiteLineBasPositionX1 + buttonRepeatSizeX + buttonRandomSizeX + soundBarSizeX + 10;
   int ecranDroiteLineBasPositionY2 = ecranDroiteLineBasPositionY1;
-  */
+  
+  int ecranDroiteLineDroitePositionX1 = ecranDroiteLineBasPositionX2;
+  int ecranDroiteLineDroitePositionY1 = ecranDroiteLineGauchePositionY1;
+  int ecranDroiteLineDroitePositionX2 = ecranDroiteLineDroitePositionX1;
+  int ecranDroiteLineDroitePositionY2 = ecranDroiteLineBasPositionY2;
+  
+  int ecranDroiteLineHaut1PositionX1 = ecranDroiteLineGauchePositionX1;
+  int ecranDroiteLineHaut1PositionY1 = ecranDroiteLineGauchePositionY1;
+  int ecranDroiteLineHaut1PositionX2 = ecranDroiteLineHaut1PositionX1 + buttonPlaySizeX / 3;
+  int ecranDroiteLineHaut1PositionY2 = ecranDroiteLineHaut1PositionY1;
+  
+  int fieldset2_1 = ecranDroiteLineHaut1PositionX2 + 3;
+  int fieldset2_2 = ecranDroiteLineHaut1PositionY1;
+  
+  int ecranDroiteLineHaut2PositionX1 = ecranDroiteLineDroitePositionX1 - soundBarSizeX + buttonRandomSizeX / 2;
+  int ecranDroiteLineHaut2PositionY1 = ecranDroiteLineHaut1PositionY1;
+  int ecranDroiteLineHaut2PositionX2 = ecranDroiteLineDroitePositionX2;
+  int ecranDroiteLineHaut2PositionY2 = ecranDroiteLineHaut2PositionY1;
+  
 
 
 
@@ -126,13 +143,17 @@ void initialisation() {
   ecranGaucheLineHaut2 = new Screens(ecranGaucheLineHaut2PositionX1, ecranGaucheLineHaut2PositionY1, ecranGaucheLineHaut2PositionX2, ecranGaucheLineHaut2PositionY2);
   ecranCentral = new Screen_center(ecranCentralPositionX, ecranCentralPositionY, ecranCentralSizeX, ecranCentralSizeY);
   ecranDroiteLineGauche = new Screens(ecranDroiteLineGauchePositionX1, ecranDroiteLineGauchePositionY1, ecranDroiteLineGauchePositionX2, ecranDroiteLineGauchePositionY2);
-  //ecranDroiteLineBas = new Screens(ecranDroiteLineBasPositionX1, ecranDroiteLineBasPositionY1, ecranDroiteLineBasPositionX2, ecranDroiteLineBasPositionY2);
+  ecranDroiteLineBas = new Screens(ecranDroiteLineBasPositionX1, ecranDroiteLineBasPositionY1, ecranDroiteLineBasPositionX2, ecranDroiteLineBasPositionY2);
+  ecranDroiteLineDroite = new Screens(ecranDroiteLineDroitePositionX1, ecranDroiteLineDroitePositionY1, ecranDroiteLineDroitePositionX2, ecranDroiteLineDroitePositionY2);
+  ecranDroiteLineHaut1 = new Screens(ecranDroiteLineHaut1PositionX1, ecranDroiteLineHaut1PositionY1, ecranDroiteLineHaut1PositionX2, ecranDroiteLineHaut1PositionY2);
+  ecranDroiteLineHaut2 = new Screens(ecranDroiteLineHaut2PositionX1, ecranDroiteLineHaut2PositionY1, ecranDroiteLineHaut2PositionX2, ecranDroiteLineHaut2PositionY2);
 
 
 
 
   fill(255);
   text("Ajout musique", fieldset1_1, fieldset1_2);
+  text("Playlists", fieldset2_1, fieldset2_2);
   textSize(screenSizeX / 100 * 1.3);
   noFill();
 }
