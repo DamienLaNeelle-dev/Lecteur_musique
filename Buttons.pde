@@ -31,6 +31,7 @@ public class Buttons {
   }
   
   void display_button() {
+    stroke(255);
     rect(positionX, positionY, sizeX, sizeY);
   }
   
