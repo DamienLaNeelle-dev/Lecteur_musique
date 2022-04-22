@@ -8,8 +8,16 @@ void draw() {
 
   int screenSizeX;
   int screenSizeY;
+  boolean initialisation_done = false;
+  boolean pause = true;
+  
+    if (initialisation_done == false) {
+    initialisation();
+    initialisation_done = true;
+  }
+  
+  
 
-  initialisation();
 
   buttonPlay.display_button();
   buttonPause.display_button();
@@ -18,6 +26,9 @@ void draw() {
   buttonNext.display_button();
   buttonRepeat.display_button();
   buttonRandom.display_button();
+  
+  
+
 
   readingBar.display_bar();
   soundBar.display_bar();
@@ -33,6 +44,8 @@ void draw() {
   ecranDroiteLineDroite.display_ecrans();
   ecranDroiteLineHaut1.display_ecrans();
   ecranDroiteLineHaut2.display_ecrans();
+  
+
 }
 Buttons buttonPlay;
 Buttons buttonPause;
@@ -41,6 +54,7 @@ Buttons buttonPrevious;
 Buttons buttonNext;
 Buttons buttonRepeat;
 Buttons buttonRandom;
+Buttons playButtonDisplay;
 
 Reading_bar readingBar;
 Sound_bar soundBar;

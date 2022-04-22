@@ -17,7 +17,7 @@ public class Buttons {
     this.sizeY = sizeY;
     this.button = button;
     for (int i = 0; i<button.length; i++) {
-      this.button[i].resize(screenSizeX, screenSizeY);
+      this.button[i].resize(this.sizeX, this.sizeY);
     }
   }
 
@@ -36,11 +36,12 @@ public class Buttons {
   String getName() {
     return this.name;
   }
-  
+
   void display_button() {
     stroke(255);
-    rect(positionX, positionY, sizeX, sizeY);
+    rect(positionX, positionY, this.sizeX, this.sizeY);
+    image(this.button[0], this.positionX, this.positionY);
   }
-  
+
 
 }
