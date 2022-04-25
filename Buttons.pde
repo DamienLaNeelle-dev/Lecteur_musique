@@ -65,10 +65,16 @@ public class Buttons {
 
   void display_button() {
     stroke(255);
-    rect(positionX, positionY, this.sizeX, this.sizeY);
+   // rect(positionX, positionY, this.sizeX, this.sizeY);
     image(this.button[statusPlay], this.positionX, this.positionY);
-    
-
+  
+    /*
+  fill(255);
+  text("Ajout musique", fieldset1_1, fieldset1_2);
+  text("Playlists", fieldset2_1, fieldset2_2);
+  textSize(screenSizeX / 100 * 1.3);
+  noFill();
+  */
   }
 
 
