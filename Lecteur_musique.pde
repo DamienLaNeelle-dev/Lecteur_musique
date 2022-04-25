@@ -3,31 +3,40 @@ void setup() {
   size(900, 600, P2D);
 }
 
+int screenSizeX;
+int screenSizeY;
+boolean initialisation_done = false;
+boolean pause = true;
+
 void draw() {
   background(0, 6, 58);
 
-  int screenSizeX;
-  int screenSizeY;
-  boolean initialisation_done = false;
-  boolean pause = true;
-  
-    if (initialisation_done == false) {
+
+
+
+  if (initialisation_done == false) {
     initialisation();
     initialisation_done = true;
   }
-  
-  
+
+  if (buttonPlay.click(mouseX, mouseY) == true) {
+    if (buttonPlay.getStatusPlay() == 0) {
+      buttonPlay.set_statusPlay(1);
+    } else if (buttonPlay.getStatusPlay() == 1) {
+      buttonPlay.set_statusPlay(0);
+    }
+  }
 
 
+
+  //buttonPause.display_button();
   buttonPlay.display_button();
-  buttonPause.display_button();
   buttonStop.display_button();
   buttonPrevious.display_button();
   buttonNext.display_button();
   buttonRepeat.display_button();
   buttonRandom.display_button();
-  
-  
+
 
 
   readingBar.display_bar();
@@ -45,7 +54,7 @@ void draw() {
   ecranDroiteLineHaut1.display_ecrans();
   ecranDroiteLineHaut2.display_ecrans();
   
-
+  mouseClick = false;
 }
 Buttons buttonPlay;
 Buttons buttonPause;

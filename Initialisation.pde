@@ -128,12 +128,13 @@ void initialisation() {
   int ecranDroiteLineHaut2PositionY2 = ecranDroiteLineHaut2PositionY1;
   
 
-  PImage playButton[] = new PImage[1];
+  PImage playButton[] = new PImage[2];
   playButton[0] = loadImage("Boutons/play.png");
+  playButton[1] = loadImage("Boutons/pause.png");
   
-  PImage pauseButton[] = new PImage[1];
+  /*PImage pauseButton[] = new PImage[1];
   pauseButton[0] = loadImage("Boutons/pause.png");
-  
+  */
   PImage stopButton[] = new PImage[1];
   stopButton[0] = loadImage("Boutons/stop.png");
   
@@ -151,7 +152,7 @@ void initialisation() {
 
 
   buttonPlay = new Buttons("Play", buttonPlayPositionX, buttonPlayPositionY, buttonPlaySizeX, buttonPlaySizeY, playButton);
-  buttonPause = new Buttons("Pause", buttonPausePositionX, buttonPausePositionY, buttonPauseSizeX, buttonPauseSizeY, pauseButton);
+  //buttonPause = new Buttons("Pause", buttonPausePositionX, buttonPausePositionY, buttonPauseSizeX, buttonPauseSizeY, pauseButton);
   buttonStop = new Buttons("Stop", buttonStopPositionX, buttonStopPositionY, buttonStopSizeX, buttonStopSizeY, stopButton);
   buttonPrevious = new Buttons("Previous", buttonPreviousPositionX, buttonPreviousPositionY, buttonPreviousSizeX, buttonPreviousSizeY, previousButton);
   buttonNext = new Buttons("Next", buttonNextPositionX, buttonNextPositionY, buttonNextSizeX, buttonNextSizeY, nextButton);
@@ -176,11 +177,7 @@ void initialisation() {
 
 
 
-  fill(255);
-  text("Ajout musique", fieldset1_1, fieldset1_2);
-  text("Playlists", fieldset2_1, fieldset2_2);
-  textSize(screenSizeX / 100 * 1.3);
-  noFill();
+
   
 
 }

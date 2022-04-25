@@ -8,6 +8,7 @@ public class Buttons {
   private int sizeY;
   private String name;
   private PImage button[];
+  private int statusPlay;
 
   Buttons(String name, int positionX, int positionY, int sizeX, int sizeY, PImage button[]) {
     this.name = name;
@@ -19,7 +20,24 @@ public class Buttons {
     for (int i = 0; i<button.length; i++) {
       this.button[i].resize(this.sizeX, this.sizeY);
     }
+    this.statusPlay = 0;
   }
+  
+      
+  boolean click(int mousex, int mousey) {
+    boolean result = false;
+
+    if (mousex >= this.positionX &&
+      mousex <= this.positionX + this.sizeX &&
+      mousey >= this.positionY &&
+      mousey <= this.positionY + this.sizeY &&  mouseClick == true)
+    {
+      result = true;
+    }
+
+    return result;
+  }
+  
 
   int getPositionX() {
     return this.positionX;
@@ -36,11 +54,21 @@ public class Buttons {
   String getName() {
     return this.name;
   }
+  int getStatusPlay(){
+   return this.statusPlay; 
+  }
+  
+  void set_statusPlay(int setStatus){
+    this.statusPlay = setStatus;
+  }
+  
 
   void display_button() {
     stroke(255);
     rect(positionX, positionY, this.sizeX, this.sizeY);
-    image(this.button[0], this.positionX, this.positionY);
+    image(this.button[statusPlay], this.positionX, this.positionY);
+    
+
   }
 
 
