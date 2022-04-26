@@ -11,8 +11,8 @@ void pressButton(Buttons buttonActions) {
 
 void textButtons(Buttons textButtonDisplay) {
   if (textButtonDisplay.getStatus() == 0) {
-    text("Off", textButtonDisplay.getPositionX() + textButtonDisplay.getSizeX() * 35 / 100, textButtonDisplay.getPositionY() + textButtonDisplay.getSizeY() + 15);
+    text("Off", textButtonDisplay.getPositionX() + textButtonDisplay.getSizeX() * 34 / 100, textButtonDisplay.getPositionY() + textButtonDisplay.getSizeY() + 15);
   } else if (textButtonDisplay.getStatus() == 1) {
-    text("On", textButtonDisplay.getPositionX() + textButtonDisplay.getSizeX() * 35 / 100, textButtonDisplay.getPositionY() + textButtonDisplay.getSizeY() + 15);
+    text("On", textButtonDisplay.getPositionX() + textButtonDisplay.getSizeX() * 34 / 100, textButtonDisplay.getPositionY() + textButtonDisplay.getSizeY() + 15);
   }
 }
