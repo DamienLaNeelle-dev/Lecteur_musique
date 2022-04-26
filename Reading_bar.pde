@@ -26,6 +26,7 @@ class Reading_bar {
   }
 
   void display_bar() {
+    stroke(255);
     rect(positionX, positionY, sizeX, sizeY);
   }
 }

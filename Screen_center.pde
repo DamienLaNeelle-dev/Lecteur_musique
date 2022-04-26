@@ -27,6 +27,7 @@ class Screen_center {
 
   void display_screen_center() {
     noFill();
+    stroke(255);
     rect(sizeX, sizeY, positionX, positionY);
   }
 }

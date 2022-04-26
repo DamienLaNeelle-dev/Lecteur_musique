@@ -1,7 +1,27 @@
+//import controlP5.*;
+
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+import processing.sound.*;
+
+SoundFile file;
+Minim minim;
+AudioPlayer player;
+
+
 void setup() {
 
   size(900, 600, P2D);
   //fullScreen(P2D);
+
+  minim = new Minim(this);
+
+  /* file = new SoundFile();
+   file.play();*/
 }
 
 int screenSizeX;
@@ -21,17 +41,16 @@ void draw() {
     initialisation_done = true;
   }
 
-  if (buttonPlay.click(mouseX, mouseY) == true) {
-    if (buttonPlay.getStatusPlay() == 0) {
-      buttonPlay.set_statusPlay(1);
-    } else if (buttonPlay.getStatusPlay() == 1) {
-      buttonPlay.set_statusPlay(0);
-    }
-  }
+  //
+  pressButton(buttonPlay);
+  pressButton(buttonRepeat);
+  pressButton(buttonRandom);
+  
+  textButtons(buttonRepeat);
+  textButtons(buttonRandom);
 
 
 
-  //buttonPause.display_button();
   buttonPlay.display_button();
   buttonStop.display_button();
   buttonPrevious.display_button();
@@ -42,24 +61,13 @@ void draw() {
 
 
   readingBar.display_bar();
+  ReadingCursor.display_readingCursor();
   soundBar.display_bar();
 
   screen.display();
   screen2.display();
   ecranCentral.display_screen_center();
-  /*
-  ecranGaucheLineGauche.display_ecrans();
-   ecranGaucheLineBas.display_ecrans();
-   ecranGaucheLineDroite.display_ecrans();
-   ecranGaucheLineHaut1.display_ecrans();
-   ecranGaucheLineHaut2.display_ecrans();
-   
-   ecranDroiteLineGauche.display_ecrans();
-   ecranDroiteLineBas.display_ecrans();
-   ecranDroiteLineDroite.display_ecrans();
-   ecranDroiteLineHaut1.display_ecrans();
-   ecranDroiteLineHaut2.display_ecrans();
-   */
+
 
 
 
@@ -73,21 +81,9 @@ Buttons buttonNext;
 Buttons buttonRepeat;
 Buttons buttonRandom;
 Buttons playButtonDisplay;
+Reading_cursor ReadingCursor;
 
 Reading_bar readingBar;
 Sound_bar soundBar;
 Points[] tabPoints;
 Screen_center ecranCentral;
-/*
-Screens ecranGaucheLineGauche;
- Screens ecranGaucheLineBas;
- Screens ecranGaucheLineDroite;
- Screens ecranGaucheLineHaut1;
- Screens ecranGaucheLineHaut2;
- 
- Screens ecranDroiteLineGauche;
- Screens ecranDroiteLineBas;
- Screens ecranDroiteLineDroite;
- Screens ecranDroiteLineHaut1;
- Screens ecranDroiteLineHaut2;
- */

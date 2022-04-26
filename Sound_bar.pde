@@ -46,6 +46,7 @@ class Sound_bar{
   }
   
   void display_bar(){
+    stroke(255);
    triangle(positionX1, positionY1, positionX2, positionY2, positionX3, positionY3); 
   }
 }

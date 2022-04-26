@@ -8,7 +8,7 @@ public class Buttons {
   private int sizeY;
   private String name;
   private PImage button[];
-  private int statusPlay;
+  private int status;
 
   Buttons(String name, int positionX, int positionY, int sizeX, int sizeY, PImage button[]) {
     this.name = name;
@@ -20,10 +20,10 @@ public class Buttons {
     for (int i = 0; i<button.length; i++) {
       this.button[i].resize(this.sizeX, this.sizeY);
     }
-    this.statusPlay = 0;
+    this.status = 0;
   }
-  
-      
+
+
   boolean click(int mousex, int mousey) {
     boolean result = false;
 
@@ -37,7 +37,7 @@ public class Buttons {
 
     return result;
   }
-  
+
 
   int getPositionX() {
     return this.positionX;
@@ -54,28 +54,19 @@ public class Buttons {
   String getName() {
     return this.name;
   }
-  int getStatusPlay(){
-   return this.statusPlay; 
+  int getStatus() {
+    return this.status;
   }
-  
-  void set_statusPlay(int setStatus){
-    this.statusPlay = setStatus;
+
+
+  void set_status(int setStatus) {
+    this.status = setStatus;
   }
-  
+
 
   void display_button() {
     stroke(255);
-   // rect(positionX, positionY, this.sizeX, this.sizeY);
-    image(this.button[statusPlay], this.positionX, this.positionY);
-  
-    /*
-  fill(255);
-  text("Ajout musique", fieldset1_1, fieldset1_2);
-  text("Playlists", fieldset2_1, fieldset2_2);
-  textSize(screenSizeX / 100 * 1.3);
-  noFill();
-  */
+    // rect(positionX, positionY, this.sizeX, this.sizeY);
+    image(this.button[status], this.positionX, this.positionY);
   }
-
-
 }

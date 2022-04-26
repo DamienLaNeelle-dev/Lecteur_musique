@@ -15,6 +15,7 @@ class Screens {
     }
 
     fill(255);
+    stroke(255);
     text(this.texte, this.tabPoints[0].positionX, this.tabPoints[0].positionY);
     textSize(screenSizeX / 100 * 1.3);
   }
