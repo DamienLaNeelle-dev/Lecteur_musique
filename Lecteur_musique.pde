@@ -15,7 +15,7 @@ AudioPlayer player;
 
 void setup() {
 
-  size(900, 600, P2D);
+  size(1280, 720, P2D);
   //fullScreen(P2D);
 
   minim = new Minim(this);
@@ -45,11 +45,11 @@ void draw() {
   pressButton(buttonPlay);
   pressButton(buttonRepeat);
   pressButton(buttonRandom);
-  
+
   textButtons(buttonRepeat);
   textButtons(buttonRandom);
 
-
+  //soundSetting(soundBar);
 
   buttonPlay.display_button();
   buttonStop.display_button();
@@ -57,6 +57,8 @@ void draw() {
   buttonNext.display_button();
   buttonRepeat.display_button();
   buttonRandom.display_button();
+  buttonVolumeDown.display_button();
+  buttonVolumeUp.display_button();
 
 
 
@@ -81,6 +83,8 @@ Buttons buttonNext;
 Buttons buttonRepeat;
 Buttons buttonRandom;
 Buttons playButtonDisplay;
+Buttons buttonVolumeDown;
+Buttons buttonVolumeUp;
 Reading_cursor ReadingCursor;
 
 Reading_bar readingBar;

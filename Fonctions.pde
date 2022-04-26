@@ -16,3 +16,12 @@ void textButtons(Buttons textButtonDisplay) {
     text("On", textButtonDisplay.getPositionX() + textButtonDisplay.getSizeX() * 34 / 100, textButtonDisplay.getPositionY() + textButtonDisplay.getSizeY() + 15);
   }
 }
+
+/*void soundSetting(Sound_bar soundVolume) {
+
+  for (int i = 0; i <  soundBar.getSizeX(); i++) {
+    if (soundVolume.click(mouseX, mouseY) == true) {
+    }
+  }
+}
+*/

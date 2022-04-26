@@ -66,7 +66,7 @@ public class Buttons {
 
   void display_button() {
     stroke(255);
-    // rect(positionX, positionY, this.sizeX, this.sizeY);
+    //rect(positionX, positionY, this.sizeX, this.sizeY);
     image(this.button[status], this.positionX, this.positionY);
   }
 }

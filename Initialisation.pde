@@ -21,45 +21,55 @@ void initialisation() {
   int buttonPauseSizeX = buttonPlaySizeX;
   int buttonPauseSizeY = buttonPlaySizeY;
 
-  int buttonStopPositionX = (buttonPlayPositionX + buttonPlaySizeX + 5);
+  int buttonStopPositionX = (buttonPlayPositionX + buttonPlaySizeX + 10);
   int buttonStopPositionY = screenSizeY / 100 * 85;
   int buttonStopSizeX = buttonPlaySizeX;
   int buttonStopSizeY = buttonPlaySizeY;
 
-  int buttonPreviousPositionX = (buttonStopPositionX + buttonStopSizeX + 5);
+  int buttonPreviousPositionX = (buttonStopPositionX + buttonStopSizeX + 10);
   int buttonPreviousPositionY = buttonStopPositionY + buttonStopSizeY / 2;
   int buttonPreviousSizeX = buttonPlaySizeX/2;
   int buttonPreviousSizeY = buttonPreviousSizeX;
 
-  int buttonNextPositionX = (buttonPreviousPositionX + buttonPreviousSizeX + 5);
+  int buttonNextPositionX = (buttonPreviousPositionX + buttonPreviousSizeX + 10);
   int buttonNextPositionY = buttonStopPositionY + buttonStopSizeY / 2;
   int buttonNextSizeX = buttonStopSizeX/2;
   int buttonNextSizeY = buttonPreviousSizeY;
 
-  int readingBarPositionX = (buttonNextPositionX + buttonNextSizeX + 5);
+  int readingBarPositionX = (buttonNextPositionX + buttonNextSizeX + 10);
   int readingBarPositionY = buttonNextPositionY + buttonNextSizeY / 4;
   int readingBarSizeX = screenSizeX / 100 * 58;
   int readingBarSizeY = buttonNextSizeY / 2;
-
-  int buttonRepeatPositionX = (readingBarPositionX + readingBarSizeX + 5);
-  int buttonRepeatPositionY = buttonStopPositionY + buttonStopSizeY / 2;
-  int buttonRepeatSizeX = buttonStopSizeX/2;
-  int buttonRepeatSizeY = buttonRepeatSizeX;
-
-  int buttonRandomPositionX = (buttonRepeatPositionX + buttonRepeatSizeX + 5);
+  
+  int buttonVolumeUpPositionX = screenSizeX * 95 / 100;
+  int buttonVolumeUpPositionY = buttonStopPositionY + buttonStopSizeY / 2;
+  int buttonVolumeUpSizeX = buttonStopSizeX/2;;
+  int buttonVolumeUpSizeY = buttonVolumeUpSizeX;
+  
+  int soundBarPositionX = buttonVolumeUpPositionX + buttonVolumeUpSizeX - 100;
+  int soundBarPositionY = buttonVolumeUpPositionY + buttonVolumeUpSizeY / 4;
+  int soundBarSizeX = screenSizeX / 100 * 5;
+  int soundBarSizeY = readingBarSizeY;
+  
+  int buttonVolumeDownPositionX = (soundBarPositionX + soundBarSizeX - 100);
+  int buttonVolumeDownPositionY = buttonVolumeUpPositionY;
+  int buttonVolumeDownSizeX = buttonVolumeUpSizeX;
+  int buttonVolumeDownSizeY = buttonVolumeUpSizeY;
+  
+  int buttonRandomPositionX = (buttonVolumeDownPositionX + buttonVolumeDownSizeX - 100);
   int buttonRandomPositionY = buttonStopPositionY + buttonStopSizeY / 2;
   int buttonRandomSizeX = buttonStopSizeX/2;
   int buttonRandomSizeY = buttonRandomSizeX;
 
-  int soundBarSizeX = buttonPlaySizeX + buttonStopSizeX + 5;
-  int soundBarSizeY = buttonStopSizeY;
-  int soundBarPositionX1 = (buttonRandomPositionX + buttonRandomSizeX + 5);
-  int soundBarPositionY1 = (buttonStopPositionY + buttonStopSizeY);
-  int soundBarPositionX2 = soundBarPositionX1 + soundBarSizeX;
-  int soundBarPositionY2 = soundBarPositionY1 - soundBarSizeY;
-  int soundBarPositionX3 = soundBarPositionX1 + soundBarSizeX;
-  int soundBarPositionY3 = (buttonStopPositionY + buttonStopSizeY);
+  int buttonRepeatPositionX = (buttonRandomPositionX + buttonRandomSizeX - 100);
+  int buttonRepeatPositionY = buttonStopPositionY + buttonStopSizeY / 2;
+  int buttonRepeatSizeX = buttonStopSizeX/2;
+  int buttonRepeatSizeY = buttonRepeatSizeX;
 
+
+  
+
+  
 
 
 
@@ -103,7 +113,7 @@ void initialisation() {
 
   int ecranDroiteLineBasPositionX1 = ecranDroiteLineGauchePositionX1;
   int ecranDroiteLineBasPositionY1 = ecranDroiteLineGauchePositionY2;
-  int ecranDroiteLineBasPositionX2 = ecranDroiteLineBasPositionX1 + buttonRepeatSizeX + buttonRandomSizeX + soundBarSizeX + 10;
+  int ecranDroiteLineBasPositionX2 = ecranDroiteLineBasPositionX1 + buttonRepeatSizeX + buttonRandomSizeX + buttonVolumeDownSizeX + buttonVolumeUpSizeX + soundBarSizeX + 20;
   int ecranDroiteLineBasPositionY2 = ecranDroiteLineBasPositionY1;
 
   int ecranDroiteLineDroitePositionX1 = ecranDroiteLineBasPositionX2;
@@ -142,6 +152,12 @@ void initialisation() {
   PImage randomButton[] = new PImage[2];
   randomButton[0] = loadImage("Boutons/random.png");
   randomButton[1] = loadImage("Boutons/random.png");
+  
+  PImage volumeDown[] = new PImage[1];
+  volumeDown[0] = loadImage("Boutons/ButtonDown.png");
+  
+  PImage volumeUp[] = new PImage[1];
+  volumeUp[0] = loadImage("Boutons/ButtonUp.png");
 
 
   buttonPlay = new Buttons("Play", buttonPlayPositionX, buttonPlayPositionY, buttonPlaySizeX, buttonPlaySizeY, playButton);
@@ -150,9 +166,11 @@ void initialisation() {
   buttonNext = new Buttons("Next", buttonNextPositionX, buttonNextPositionY, buttonNextSizeX, buttonNextSizeY, nextButton);
   buttonRepeat = new Buttons("Repeat", buttonRepeatPositionX, buttonRepeatPositionY, buttonRepeatSizeX, buttonRepeatSizeY, repeatButton);
   buttonRandom = new Buttons("Random", buttonRandomPositionX, buttonRandomPositionY, buttonRandomSizeX, buttonRandomSizeY, randomButton);
+  buttonVolumeDown = new Buttons("Volume Down", buttonVolumeDownPositionX, buttonVolumeDownPositionY, buttonVolumeDownSizeX, buttonVolumeDownSizeY, volumeDown);
+  buttonVolumeUp = new Buttons("Volume Up", buttonVolumeUpPositionX, buttonVolumeUpPositionY, buttonVolumeUpSizeX, buttonVolumeUpSizeY, volumeUp);
 
   readingBar = new Reading_bar(readingBarPositionX, readingBarPositionY, readingBarSizeX, readingBarSizeY);
-  soundBar = new Sound_bar(soundBarPositionX1, soundBarPositionY1, soundBarPositionX2, soundBarPositionY2, soundBarPositionX3, soundBarPositionY3, soundBarSizeX, soundBarSizeY);
+  soundBar = new Sound_bar(soundBarPositionX, soundBarPositionY, soundBarSizeX, soundBarSizeY);
 
   String text_1 = "Ajouter Musique";
 
