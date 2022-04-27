@@ -16,6 +16,24 @@ class Reading_cursor {
       this.cursor[i].resize(this.sizeX, this.sizeY);
     }
   }
+  
+    boolean click(int mousex, int mousey) {
+    boolean result = false;
+
+    if (mousex >= this.positionX &&
+      mousex <= this.positionX + this.sizeX &&
+      mousey >= this.positionY &&
+      mousey <= this.positionY + this.sizeY &&  mouseClick == true)
+    {
+      result = true;
+    }
+
+    return result;
+  }
+  
+  void set_positionX(int setPositionX){
+   this.positionX = setPositionX; 
+  }
 
   int getPositionX() {
     return this.positionX;

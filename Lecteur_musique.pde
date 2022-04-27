@@ -48,6 +48,8 @@ void draw() {
 
   textButtons(buttonRepeat);
   textButtons(buttonRandom);
+  
+  slideReadingCursor(readingCursor);
 
   //soundSetting(soundBar);
 
@@ -57,14 +59,15 @@ void draw() {
   buttonNext.display_button();
   buttonRepeat.display_button();
   buttonRandom.display_button();
-  buttonVolumeDown.display_button();
-  buttonVolumeUp.display_button();
+  /*buttonVolumeDown.display_button();
+  buttonVolumeUp.display_button();*/
 
 
 
   readingBar.display_bar();
-  ReadingCursor.display_readingCursor();
+  readingCursor.display_readingCursor();
   soundBar.display_bar();
+  cursorSound.display_soundCursor();
 
   screen.display();
   screen2.display();
@@ -83,9 +86,10 @@ Buttons buttonNext;
 Buttons buttonRepeat;
 Buttons buttonRandom;
 Buttons playButtonDisplay;
-Buttons buttonVolumeDown;
-Buttons buttonVolumeUp;
-Reading_cursor ReadingCursor;
+/*Buttons buttonVolumeDown;
+Buttons buttonVolumeUp;*/
+Reading_cursor readingCursor;
+Sound_cursor cursorSound;
 
 Reading_bar readingBar;
 Sound_bar soundBar;

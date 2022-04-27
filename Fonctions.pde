@@ -17,11 +17,9 @@ void textButtons(Buttons textButtonDisplay) {
   }
 }
 
-/*void soundSetting(Sound_bar soundVolume) {
-
-  for (int i = 0; i <  soundBar.getSizeX(); i++) {
-    if (soundVolume.click(mouseX, mouseY) == true) {
-    }
+void slideReadingCursor (Reading_cursor slideReading) {
+  if (slideReading.click(mouseX, mouseY) == true){
+    slideReading.set_positionX(mouseX);
   }
+ 
 }
-*/
