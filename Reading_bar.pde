@@ -12,6 +12,18 @@ class Reading_bar {
     this.sizeY = sizeY;
   }
 
+  boolean click(int mousex, int mousey) {
+    boolean result = false;
+
+    if (mousex >= this.positionX &&
+      mousex <= this.positionX + this.sizeX &&
+      mousey >= this.positionY &&
+      mousey <= this.positionY + this.sizeY &&  mouseStay == true)
+    {
+      result = true;
+    }
+    return result;
+  }
   int getPositionX() {
     return this.positionX;
   }

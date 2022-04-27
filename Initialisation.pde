@@ -175,7 +175,7 @@ void initialisation() {
    buttonVolumeUp = new Buttons("Volume Up", buttonVolumeUpPositionX, buttonVolumeUpPositionY, buttonVolumeUpSizeX, buttonVolumeUpSizeY, volumeUp);*/
 
   readingBar = new Reading_bar(readingBarPositionX, readingBarPositionY, readingBarSizeX, readingBarSizeY);
-  soundBar = new Sound_bar(soundBarPositionX, soundBarPositionY, soundBarSizeX, soundBarSizeY);
+  soundBar = new Reading_bar(soundBarPositionX, soundBarPositionY, soundBarSizeX, soundBarSizeY);
 
   String text_1 = "Ajouter Musique";
 
@@ -233,6 +233,6 @@ void initialisation() {
   soundCursor[0] = loadImage("Boutons/cursor.png");
 
   readingCursor = new Reading_cursor(cursorPositionX, cursorPositionY, cursorSizeX, cursorSizeY, cursor);
-  cursorSound = new Sound_cursor(soundCursorPositionX, soundCursorPositionY, soundCursorSizeX, soundCursorSizeY, soundCursor);
+  cursorSound = new Reading_cursor(soundCursorPositionX, soundCursorPositionY, soundCursorSizeX, soundCursorSizeY, soundCursor);
   
 }

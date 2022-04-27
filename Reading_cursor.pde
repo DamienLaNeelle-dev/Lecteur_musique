@@ -16,23 +16,18 @@ class Reading_cursor {
       this.cursor[i].resize(this.sizeX, this.sizeY);
     }
   }
-  
-    boolean click(int mousex, int mousey) {
+
+  boolean click(int mousex, int mousey) {
     boolean result = false;
 
     if (mousex >= this.positionX &&
       mousex <= this.positionX + this.sizeX &&
       mousey >= this.positionY &&
-      mousey <= this.positionY + this.sizeY &&  mouseClick == true)
+      mousey <= this.positionY + this.sizeY &&  mouseStay == true)
     {
       result = true;
     }
-
     return result;
-  }
-  
-  void set_positionX(int setPositionX){
-   this.positionX = setPositionX; 
   }
 
   int getPositionX() {
@@ -46,6 +41,10 @@ class Reading_cursor {
   }
   int getSizeY() {
     return this.sizeY;
+  }
+
+  void set_positionX(int setPositionX) {
+    this.positionX = setPositionX;
   }
 
   void display_readingCursor() {

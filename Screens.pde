@@ -9,13 +9,14 @@ class Screens {
   }
 
   void display() {
+    stroke(255);
     for (int i = 0; i < this.tabPoints.length - 1; i++) {
       line(this.tabPoints[i].positionX, this.tabPoints[i].positionY, this.tabPoints[i+1].positionX, this.tabPoints[i+1].positionY);
-      noFill();
+      //noFill();
     }
 
-    fill(255);
-    stroke(255);
+    //fill(255);
+    
     text(this.texte, this.tabPoints[0].positionX, this.tabPoints[0].positionY);
   }
 }

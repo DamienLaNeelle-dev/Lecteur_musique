@@ -17,9 +17,8 @@ void textButtons(Buttons textButtonDisplay) {
   }
 }
 
-void slideReadingCursor (Reading_cursor slideReading) {
-  if (slideReading.click(mouseX, mouseY) == true){
-    slideReading.set_positionX(mouseX);
+void slideReadingCursor (Reading_cursor slideReading, Reading_bar slideBar) {
+  if (slideBar.click(mouseX, mouseY) == true) {
+    slideReading.set_positionX(mouseX - (slideReading.getSizeX()/2));
   }
- 
 }

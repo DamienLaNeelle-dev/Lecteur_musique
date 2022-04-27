@@ -49,7 +49,8 @@ void draw() {
   textButtons(buttonRepeat);
   textButtons(buttonRandom);
   
-  slideReadingCursor(readingCursor);
+  slideReadingCursor(readingCursor, readingBar);
+  slideReadingCursor(cursorSound, soundBar);
 
   //soundSetting(soundBar);
 
@@ -67,7 +68,7 @@ void draw() {
   readingBar.display_bar();
   readingCursor.display_readingCursor();
   soundBar.display_bar();
-  cursorSound.display_soundCursor();
+  cursorSound.display_readingCursor();
 
   screen.display();
   screen2.display();
@@ -75,7 +76,7 @@ void draw() {
 
 
 
-
+input_mouse();
   mouseClick = false;
 }
 Buttons buttonPlay;
@@ -89,9 +90,9 @@ Buttons playButtonDisplay;
 /*Buttons buttonVolumeDown;
 Buttons buttonVolumeUp;*/
 Reading_cursor readingCursor;
-Sound_cursor cursorSound;
+Reading_cursor cursorSound;
 
 Reading_bar readingBar;
-Sound_bar soundBar;
+Reading_bar soundBar;
 Points[] tabPoints;
 Screen_center ecranCentral;
