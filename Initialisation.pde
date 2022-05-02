@@ -235,4 +235,7 @@ void initialisation() {
   readingCursor = new Reading_cursor(cursorPositionX, cursorPositionY, cursorSizeX, cursorSizeY, cursor);
   cursorSound = new Reading_cursor(soundCursorPositionX, soundCursorPositionY, soundCursorSizeX, soundCursorSizeY, soundCursor);
   
+  player = SoundFile();
+  player[0].play();
+
 }

@@ -8,14 +8,14 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 import processing.sound.*;
 
-SoundFile file;
+//SoundFile file;
 Minim minim;
-AudioPlayer player;
+AudioPlayer[] player;
 
 
 void setup() {
 
-  size(1280, 720, P2D);
+  size(1400, 1000, P2D);
   //fullScreen(P2D);
 
   minim = new Minim(this);
